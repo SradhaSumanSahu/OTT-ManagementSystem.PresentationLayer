@@ -1,0 +1,67 @@
+﻿@model OTTMangementSystem.Entities.User
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+@if (TempData["SuccessMessage"] != null)
+{
+<div class="alert alert-success">
+    <strong>success !</strong>
+    @TempData["SuccessMessage"] <button type="button" class="close" data-dismiss="alert" aria-label="close">
+        <span>X</span>
+    </button>
+</div>
+}
+
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateofRegistration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateofRegistration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContactNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContactNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Platform)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Platform)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.UserID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
